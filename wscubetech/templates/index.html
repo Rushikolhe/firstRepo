@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .main{
+                width: 1000px;
+                background-color: yellow;
+                color: red;
+                padding: 20px;
+                font-size: 30px;
+            }
+        </style>
+    <head>
+    <body>
+        {% for n in clist %}
+        <div>{{forloop.last}}{{n}}</div>
+        {% endfor %}
+
+
+        <br/>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>name</th>
+                <th>phone Number</th>
+            </tr>
+
+            {% for d in student_details %}
+            <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+  
+        
+        {% for n in numbers %}
+        
+            {% if n > 20 %}
+            <div>{{n}}</div>
+            {% endif %}
+
+        {% endfor %}
+    
+    <body>
+</html>
